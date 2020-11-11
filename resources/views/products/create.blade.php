@@ -5,6 +5,11 @@
     <input type="text" name="name">
     <textarea name="description"></textarea>
     <input type="number" name="price">
+    <select name="category_id">
+    @foreach ($categories as $category)
+    <option value="{{ $category->id }}">{{ $category->name }}</option>
+    @endforeach
+    </select>
     <button type="submit">Create</button>
 </form>
 
